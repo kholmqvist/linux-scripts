@@ -10,7 +10,7 @@ if [ "$(whoami)" == "root" ]; then echo "Don't run this script as root"; exit; f
 echo "Please set a new hostname!"
 echo -n "New Hostname: "
 read NAME
-bash ${HOME}/NP-Linux/Scripts/set-hostname.sh -n ${NAME}
+bash ${HOME}/NP-Linux-Scripts/hostname/set-hostname.sh -n ${NAME}
 
 # Run this command as the last command before exiting
 touch $HOME/.first-boot > /dev/null 2>&1
