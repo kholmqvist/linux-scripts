@@ -1,14 +1,14 @@
 #!/bin/bash
 
 while getopts ":dp" opt; do
-    case ${opt} in
-        d) DOMAIN="${OPTARG}" ;;
-				p) PORT="${OPTARG}" ;;
-        \?) echo "Invalid option: -${OPTARG}" >&2
-            exit 1 ;;
-        :) echo "Option -${OPTARG} requires an argument." >&2
-            exit 1 ;;
-    esac
+  case ${opt} in
+    d) DOMAIN="${OPTARG}" ;;
+    p) PORT="${OPTARG}" ;;
+    \?) echo "Invalid option: -${OPTARG}" >&2
+        exit 1 ;;
+    :) echo "Option -${OPTARG} requires an argument." >&2
+       exit 1 ;;
+  esac
 done
 
 # Check SSL certificate expiration 
