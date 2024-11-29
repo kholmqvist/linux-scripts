@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while getopts ":dp" opt; do
+while getopts ":d:p" opt; do
   case ${opt} in
     d) DOMAIN="${OPTARG}" ;;
     p) PORT="${OPTARG}" ;;
