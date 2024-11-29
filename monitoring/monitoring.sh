@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get NIC name
-NIC="ip -o -4 route show to default | awk '{print $5}'"
+NIC="$(ip -o -4 route show to default | awk '{print $5}')"
 
 # Colors for readability
 GREEN='\033[0;32m'
