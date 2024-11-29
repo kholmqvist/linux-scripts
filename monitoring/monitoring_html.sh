@@ -3,7 +3,7 @@
 NIC="$(ip -o -4 route show to default | awk '{print $5}')"
 
 # Output file in HTML format
-OUTPUT_FILE="/opt/script/monitoring_report.html"
+OUTPUT_FILE="${HOME}/monitoring_report.html"
 
 # HTML Header
 echo "<html>
