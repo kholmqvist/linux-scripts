@@ -6,4 +6,4 @@
 
 
 ### Usage:
-add **bash $HOME/linux-scripts/first-boot/first-boot.sh** to bottom of your ~/.profile
+add ***bash ${HOME}/linux-scripts/first-boot/first-boot.sh*** to bottom of your ~/.profile
