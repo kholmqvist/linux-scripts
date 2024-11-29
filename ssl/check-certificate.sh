@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while getopts ":d:" opt; do
+while getopts ":d" opt; do
     case ${opt} in
         d) DOMAIN="${OPTARG}" ;;
         \?) echo "Invalid option: -${OPTARG}" >&2
