@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Get NIC name
+NIC="ip -o -4 route show to default | awk '{print $5}'"
+
 # Colors for readability
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -22,7 +25,7 @@ df -h | grep '^/dev' | awk '{print $1 ": " $5 " used, " $4 " available"}'
 
 # 4. Network Traffic
 echo -e "${YELLOW}\n>> Network Traffic: ${NC}"
-ifstat -i eth0 1 1 | awk 'NR==3 {print "RX: " $1 " KB/s, TX: " $2 " KB/s"}'
+ifstat -i ${NIC} 1 1 | awk 'NR==3 {print "RX: " $1 " KB/s, TX: " $2 " KB/s"}'
 
 # 5. Top 5 Memory Consuming Processes
 echo -e "${YELLOW}\n>> Top 5 Memory Consuming Processes: ${NC}"
